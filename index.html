@@ -8,45 +8,50 @@
 </head>
 <body>
 
-<!-- Header / Navbar -->
+<!-- ✅ HEADER con logo y menú de navegación -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="#">MiMarca</a>
-    <div class="collapse navbar-collapse">
+    <a class="navbar-brand fw-bold" href="#">MiMarca</a>
+    <!-- Botón hamburguesa para móviles -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Menú -->
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Hero -->
+<!-- ✅ HERO section -->
 <section class="bg-light text-center p-5">
-  <h1 class="display-4">Bienvenido a Mi Página</h1>
-  <p class="lead">Creamos soluciones digitales para tu negocio</p>
+  <h1 class="display-4 fw-bold">Bienvenido a Mi Página</h1>
+  <p class="lead">Creamos soluciones digitales para tu negocio 🚀</p>
   <a href="#servicios" class="btn btn-primary btn-lg">Conocer más</a>
 </section>
 
-<!-- Servicios -->
+<!-- ✅ SECCIÓN DE SERVICIOS con 3 cards -->
 <section id="servicios" class="container py-5">
-  <h2 class="text-center mb-4">Nuestros Servicios</h2>
-  <div class="row">
+  <h2 class="text-center mb-4 fw-bold">Nuestros Servicios</h2>
+  <div class="row g-4">
     <div class="col-md-4">
-      <div class="card p-3 shadow-sm">
+      <div class="card p-4 shadow-sm text-center h-100">
         <h5>Diseño Web</h5>
         <p>Webs modernas y responsivas con Bootstrap.</p>
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card p-3 shadow-sm">
+      <div class="card p-4 shadow-sm text-center h-100">
         <h5>Marketing Digital</h5>
         <p>Estrategias para hacer crecer tu negocio online.</p>
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card p-3 shadow-sm">
+      <div class="card p-4 shadow-sm text-center h-100">
         <h5>Consultoría</h5>
         <p>Te ayudamos a transformar tus ideas en proyectos reales.</p>
       </div>
@@ -54,10 +59,12 @@
   </div>
 </section>
 
-<!-- Footer -->
+<!-- ✅ FOOTER -->
 <footer class="bg-dark text-white text-center py-3">
   <p>&copy; 2025 MiMarca | Todos los derechos reservados</p>
 </footer>
 
+<!-- ✅ Bootstrap JS para que funcione el menú responsive -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
