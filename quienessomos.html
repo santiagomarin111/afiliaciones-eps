@@ -8,17 +8,57 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- Font Awesome para íconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      @font-face {
+        font-family: "Mongolian Baiti";
+        src: local("Mongolian Baiti");
+      }
+      @font-face {
+        font-family: "Century";
+        src: local("Century");
+      }
+      @font-face {
+        font-family: "MS UI Gothic";
+        src: local("MS UI Gothic");
+      }
+
+      .bg-azul-intenso {
+        background-color: #0056a4;
+      }
+
+      .bg-rojo-intenso {
+        background-color: #d72638;
+      }
+
+      blockquote p {
+        font-family: "Mongolian Baiti", serif;
+        font-size: 36pt;
+      }
+
+      h2 {
+        font-family: "Century", serif;
+        font-size: 30pt;
+      }
+
+      h3,
+      h4 {
+        font-family: "MS UI Gothic", sans-serif;
+        font-size: 24pt;
+      }
+    </style>
   </head>
   <body>
-    <!-- Imagen principal -->
-    <div class="text-center my-3">
-      <img src="salud.jpg" alt="imagen" width="300" />
-    </div>
-
     <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-azul-intenso">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Afiliaciones EPS</a>
+        <a class="navbar-brand fw-bold" href="index.html">
+          <i class="fas fa-heart-pulse me-2"></i>Afiliaciones EPS
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -31,11 +71,24 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="#">contacto</a>
+              <a class="nav-link active" href="index.html">
+                <i class="fas fa-house me-1"></i>Inicio
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
-              <a class="nav-link" href="productos.html">productos</a>
+              <a class="nav-link" href="quienessomos.html">
+                <i class="fas fa-user-group me-1"></i>Contacto
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="productos.html">
+                <i class="fas fa-box-open me-1"></i>Productos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeria.html">
+                <i class="fas fa-image me-1"></i>Galería
+              </a>
             </li>
           </ul>
         </div>
@@ -114,6 +167,18 @@
         </div>
       </div>
     </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-rojo-intenso text-white text-center py-3">
+      <p>&copy; 2025 Afiliaciones EPS | Todos los derechos reservados</p>
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a href="quienessomos.html" class="text-white text-decoration-none">
+            <i class="fas fa-users me-1"></i>Quiénes somos
+          </a>
+        </li>
+      </ul>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

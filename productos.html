@@ -8,12 +8,84 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     />
+    <!-- Enlaza Font Awesome desde CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      @font-face {
+        font-family: "Century";
+        src: local("Century");
+      }
+      @font-face {
+        font-family: "MS UI Gothic";
+        src: local("MS UI Gothic");
+      }
+
+      html,
+      body {
+        height: 100%;
+        background-color: #0039f5;
+      }
+
+      .bg-azul-intenso {
+        background-color: #0056a4;
+      }
+
+      .bg-rojo-intenso {
+        background-color: #d72638;
+      }
+
+      .centro {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .producto {
+        border: 1px solid #ccc;
+        padding: 20px;
+        max-width: 400px;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+
+      .producto h2 {
+        color: #2c3e50;
+        font-family: "Century", serif;
+        font-size: 30pt;
+      }
+
+      .producto h3 {
+        font-family: "MS UI Gothic", sans-serif;
+        font-size: 24pt;
+      }
+
+      .precio {
+        font-size: 1.5em;
+        color: #e74c3c;
+      }
+
+      .especificaciones {
+        margin-top: 10px;
+      }
+
+      .especificaciones ul {
+        padding-left: 20px;
+      }
+    </style>
   </head>
   <body>
     <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-azul-intenso">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Afiliaciones EPS</a>
+        <a class="navbar-brand fw-bold" href="index.html">
+          <i class="fas fa-heart-pulse me-2"></i>Afiliaciones EPS
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -29,26 +101,65 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Productos</a>
+              <a class="nav-link active" href="#">
+                <i class="fas fa-box-open me-1"></i>Productos
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
-              <a class="nav-link" href="quienessomos.html">Contacto</a>
+              <a class="nav-link" href="index.html">
+                <i class="fas fa-house me-1"></i>Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="quienessomos.html">
+                <i class="fas fa-user-group me-1"></i>Contacto
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeria.html">
+                <i class="fas fa-image me-1"></i>Galería
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Contenido principal -->
-    <main class="container my-5">
-      <h1 class="text-center">Bienvenido a Afiliaciones EPS</h1>
-      <p class="text-center">
-        <img src="Afiliaciones-2022.jpg" alt="" width="350px" />
-      </p>
+    <!-- Contenido principal centrado -->
+    <main class="container centro">
+      <img
+        src="img/Afiliaciones-2022.jpg"
+        alt="Imagen EPS"
+        width="500px"
+        class="mb-3"
+      />
+      <div class="producto text-center">
+        <h2>Afiliación a una EPS</h2>
+        <p class="precio">$25.000</p>
+        <div class="especificaciones">
+          <h3>Especificaciones:</h3>
+          <ul class="text-start">
+            <li>Atención médica general y especializada.</li>
+            <li>
+              Acceso a medicamentos incluidos en el Plan de Beneficios en Salud
+              (PBS).
+            </li>
+            <li>
+              Posibilidad de agendar citas con médicos generales y
+              especialistas.
+            </li>
+            <li>
+              Red de clínicas, hospitales y laboratorios en diferentes regiones.
+            </li>
+            <li>
+              Afiliación de beneficiarios como hijos, cónyuge o padres
+              dependientes.
+            </li>
+          </ul>
+        </div>
+      </div>
     </main>
 
-    <!-- Scripts de Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Pie de página -->
   </body>
 </html>

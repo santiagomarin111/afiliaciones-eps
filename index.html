@@ -8,17 +8,78 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- Font Awesome para íconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      @font-face {
+        font-family: "Mongolian Baiti";
+        src: local("Mongolian Baiti");
+      }
+      @font-face {
+        font-family: "Century";
+        src: local("Century");
+      }
+      @font-face {
+        font-family: "MS UI Gothic";
+        src: local("MS UI Gothic");
+      }
+
+      h1 {
+        font-family: "Mongolian Baiti", serif;
+        font-size: 36pt;
+      }
+
+      h2 {
+        font-family: "Century", serif;
+        font-size: 30pt;
+      }
+
+      h5 {
+        font-family: "MS UI Gothic", sans-serif;
+        font-size: 24pt;
+      }
+
+      .bg-azul-intenso {
+        background-color: #0056a4;
+      }
+
+      .bg-rojo-intenso {
+        background-color: #d72638;
+      }
+
+      .hero {
+        min-height: 60vh;
+        background-color: #e9f1ff;
+        padding: 40px 0;
+      }
+
+      .hero img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .card img {
+        border-radius: 10px;
+      }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-azul-intenso">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#">afiliaciones eps</a>
-
+        <a class="navbar-brand fw-bold" href="index.html">
+          <i class="fas fa-heart-pulse me-2"></i>Afiliaciones EPS
+        </a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-label="Alternar navegación"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,68 +87,105 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Inicio</a>
+              <a class="nav-link active" href="index.html">
+                <i class="fas fa-house me-1"></i>Inicio
+              </a>
             </li>
-            <li class="nav-item"></li>
             <li class="nav-item">
-              <a class="nav-link" href="quienessomos.html">Contacto</a>
-              <a class="nav-link" href="productos.html">productos</a>
+              <a class="nav-link" href="quienessomos.html">
+                <i class="fas fa-user-group me-1"></i>Contacto
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="productos.html">
+                <i class="fas fa-box-open me-1"></i>Productos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeria.html">
+                <i class="fas fa-image me-1"></i>Galería
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <section class="hero d-flex align-items-center text-center text-blue">
+    <!-- Sección Hero -->
+    <section class="hero d-flex align-items-center text-center">
       <div class="container">
         <h1 class="display-4 fw-bold">Afiliaciones EPS</h1>
-        <p class="lead">afiliate hoy, vive tranquilo mañana🧠</p>
-        <div class="row">
-          <img src="img/eps.jpg" class="col-3 mx-auto d-block" />
-          <button class="btn btn-primary btn-sm">Conocer más</button>
-        </div>
+        <p class="lead">Afíliate hoy, vive tranquilo mañana 🧠</p>
+        <img
+          src="logo.png"
+          alt="Imagen EPS"
+          class="img-fluid col-6 mx-auto d-block mb-4"
+        />
+        <button
+          class="btn btn-primary btn-sm"
+          onclick="document.getElementById('servicios').scrollIntoView({ behavior: 'smooth' })"
+        >
+          Conocer más
+        </button>
       </div>
     </section>
 
+    <!-- Sección Servicios -->
     <section id="servicios" class="container py-5">
       <h2 class="text-center mb-4 fw-bold">Nuestros Servicios</h2>
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card p-4 shadow-sm text-center h-100">
-            <h5>Atencion medica integral</h5>
-            <p>Acceso a consultas,especialistas cuando lo necesites</p>
-            <img src="img/citas.jpg" alt="" width="350px" />
+            <h5>Atención médica integral</h5>
+            <p>Acceso a consultas y especialistas cuando lo necesites.</p>
+            <img
+              src="img/citas.jpg"
+              alt="Citas médicas"
+              width="100%"
+              loading="lazy"
+            />
           </div>
         </div>
         <div class="col-md-4">
           <div class="card p-4 shadow-sm text-center h-100">
             <h5>Todo incluido</h5>
-            <p>Medicamentos esenciales y tratamientos</p>
-            <img src="img/medicamentos.jpg" alt="" width="350px" />
+            <p>Medicamentos esenciales y tratamientos cubiertos.</p>
+            <img
+              src="img/medicamentos.jpg"
+              alt="Medicamentos"
+              width="100%"
+              loading="lazy"
+            />
           </div>
         </div>
         <div class="col-md-4">
           <div class="card p-4 shadow-sm text-center h-100">
-            <h5>proteccion a toda tu familia</h5>
-            <p>
-              Te ayudamos a afliar a tus familiares para que gozen de este
-              servicio
-            </p>
-            <img src="img/familia.jpg" alt="" width="350px" />
+            <h5>Protección a toda tu familia</h5>
+            <p>Afiliamos a tus familiares para que disfruten del servicio.</p>
+            <img
+              src="img/familia.jpg"
+              alt="Familia protegida"
+              width="100%"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="bg-dark text-white text-center py-3">
-      <p>&copy; 2025 afiliaciones eps| Todos los derechos reservados</p>
-    </footer>
-    <nav>
-      <ul>
-        <li><a href="quienessomos.html">quienes somos</a></li>
+    <!-- Pie de página -->
+    <footer class="bg-rojo-intenso text-white text-center py-3">
+      <p>&copy; 2025 Afiliaciones EPS | Todos los derechos reservados</p>
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a href="quienessomos.html" class="text-white text-decoration-none">
+            <i class="fas fa-users me-1"></i>Quiénes somos
+          </a>
+        </li>
       </ul>
-    </nav>
+    </footer>
 
+    <!-- Scripts de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
